@@ -1,17 +1,15 @@
 // Creare un oggetto che descriva uno studente con le seguenti proprietà: nome, cognome e età. Stampare a schermo attraverso il for in tutte le proprietà.
 $(document).ready(function() {
-  var studente = {
-    'nome': 'Giuseppe',
-    'cognome': 'Arimatea',
-    'eta': '23'
-  };
-
-
-  for (var key in studente) {
-    var dati = studente[key]
-    console.log(key + ': ' + dati);
-    $('.stampa').append(dati + ' ');
-  }
+  // var studente = {
+  //   'nome': 'Giuseppe',
+  //   'cognome': 'Arimatea',
+  //   'eta': '23'
+  // };
+  // for (var key in studente) {
+  //   var dati = studente[key]
+  //   console.log(key + ': ' + dati);
+  //   $('.stampa').append(dati + ' ');
+  // }
 
 // Creare un array di oggetti di studenti. Ciclare su tutti gli studenti e stampare per ognuno nome e cognome
 // var arrayStudenti = [
