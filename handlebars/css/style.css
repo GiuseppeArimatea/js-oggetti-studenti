@@ -1,0 +1,22 @@
+.clearfix:after{
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.domanda{
+  float: right;
+  clear: both;
+  background: black;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+}
+.risposta{
+  float: left;
+  clear: both;
+  background: green;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+}

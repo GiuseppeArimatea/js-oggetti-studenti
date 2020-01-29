@@ -1,19 +1,45 @@
-// Creare un oggetto che descriva uno studente con le seguenti proprietà: nome, cognome e età. Stampare a schermo attraverso il for in tutte le proprietà.
-$(document).ready(function() {
-  var source = $("#entr#y-template").html();
-  var template = Handlebars.compile(source);
 
+
+$(document).ready( function () {
+$('button').click(function () {
+  var message = $('input').val();
+  var source = $("#template").html();
+  var template = Handlebars.compile(source);
   var context = {
-    title: Handlebars,
-    nome: "Giuseppe",
-    cognome: "Arimatea",
-    eta: "23"
+    'classe': 'domanda',
+    'text' : message,
+    'time' : getTime()
   };
   var html = template(context);
-  app.append(html);
-// Creare un array di oggetti di studenti. Ciclare su tutti gli studenti e stampare per ognuno nome e cognome
+  $('.app').append(html);
+  $('input').val('');
 
-//
-// // Dare la possibilità all’utente attraverso 3 prompt di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
+  setTimeout(function () {
+    var anni = '100!'
+    var source =$("#template").html();
+    var template = Handlebars.compile(source);
+    var context = {
+      'classe': 'risposta',
+      'text' : anni,
+      'time' : getTime()
+    };
+    var html = template(context);
+    $('.app').append(html);
+  }, 3000);
+});
+
+function getTime() {
+var data = new Date();
+var hours = addZero(data.getHours());
+var minutes = addZero(data.getMinutes());
+var time = hours +':'+ minutes;
+return time;
+}
+function addZero(number) {
+if(number < 10) {
+  number = '0' + number;
+}
+return number;
+}
 
 });
